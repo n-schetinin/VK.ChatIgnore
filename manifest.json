@@ -1,0 +1,38 @@
+{
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "jquery.js",
+                "ignore.js"                
+            ],
+            "css": ["ignore.css"],
+            "matches": [
+                "https://vk.com/*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "name": "VK chat ignore",
+    "version": "0.9.1",
+    "description": "Игнорирование пользователей в групповых чатах VK",
+    "permissions": [
+        "https://*/*",
+        "unlimitedStorage",
+        "storage",
+        "contextMenus",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_title": "VK Chat Ignore"    
+    },
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "author": "Digital Fox",    
+    "manifest_version": 2
+}
